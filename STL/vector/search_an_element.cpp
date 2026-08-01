@@ -1,12 +1,13 @@
 #include<iostream>
 #include<vector>
-#include<climits>
 using namespace std;
 int main()
 {
-    int n,largest=INT_MIN;
-    cout<<"enter the size :";
+    int n,element;
+    cout<<"enter the size:"<<endl;
     cin>>n;
+    cout<<"enter the element you want to search for:";
+    cin>>element;
     vector<int>v;
     for(int i=0;i<n;i++){
         int x;
@@ -17,11 +18,11 @@ int main()
     for(auto it=v.begin();it!=v.end();it++){
         cout<<*it<<" ";
     }
-    cout<<endl;
     for(auto it=v.begin();it!=v.end();it++){
-        if(*it>largest){
-            largest=*it;
+        if(*it==element){
+            cout<<"the element is found at:"<<it-v.begin();
+            return 0;
         }
     }
-    cout<<"the largest element is:"<<largest;
+    cout<<"element not found:";
 }
