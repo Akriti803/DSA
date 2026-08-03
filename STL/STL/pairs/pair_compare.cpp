@@ -8,7 +8,10 @@ int main()
     cin>>p1.first>>p1.second;
     cout<<"enter the first and second element of the second pair:"<<endl;
     cin>>p2.first>>p2.second;
-    if(p1.first==p2.first){
+    if(p1.first==p2.first && p1.second==p2.second){
+        cout<<"both the pairs are equal;"<<endl;
+    }
+    else if(p1.first==p2.first){
         cout<<"we'll compare the first element:";
         if(p1.second>p2.second){
             cout<<p1.second<<">"<<p2.second;
@@ -26,9 +29,4 @@ int main()
             cout<<p2.first<<">"<<p1.first;
         }
     }
-    else if(p1.first==p2.first && p1.second==p2.second ){
-
-    
-        cout<<"both the pairs are equal:";
-      }
   }
