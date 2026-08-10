@@ -4,7 +4,7 @@
 using namespace std;
 int main()
 {
-    int n,sum=0,maximum_sum=INT_MIN;
+    int n,maximum_sum=INT_MIN;
     cout<<"enter the size of the array:";
     cin>>n;
     int arr[n];
@@ -19,6 +19,7 @@ int main()
     }
     cout<<endl;
     for(int start=0;start<n;start++){
+        int sum=0;//naye subarray me sum dobara zero hona chahiye 
         for(int end=start;end<n;end++){
             sum+=arr[end];
             maximum_sum=max(sum,maximum_sum);  
