@@ -43,7 +43,29 @@ public:
   }
   void pop_front()
   {
-    
+    if(head==NULL){
+        cout<<"the lost is empty"<<endl;
+        return;
+    }
+    Node* temp=head;
+    head=head->next;
+    temp->next=NULL;
+    delete temp;
+  }
+  void pop_back()
+  {
+    if(head==NULL)
+    {
+        cout<<"the list is empty"<<endl;
+        return;
+    }
+     Node* temp=head;
+     while(temp->next->next!=NULL){
+        temp=temp->next;
+     }
+     temp->next=NULL;
+     delete tail;
+     tail=temp;
   }
   void print()
   {
@@ -58,5 +80,15 @@ public:
 int main()
 {
     list ll;
-    
+    ll.push_front(10); 
+    ll.push_front(20); 
+    ll.push_front(30); 
+    ll.push_front(40); 
+    ll.push_back(50);
+    ll.push_back(60);
+    ll.push_back(70);
+    ll.push_back(80);
+    ll.pop_front();
+    ll.pop_back();
+    ll.print();
 }  
