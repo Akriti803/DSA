@@ -59,7 +59,7 @@ class list{
             return;
         }
         Node* temp=head;
-        while(temp->next->next!=tail){
+        while(temp->next->next!=NULL){
             temp=temp->next;
         }
         temp->next=NULL;
