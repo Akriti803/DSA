@@ -42,18 +42,27 @@ public:
       tail->next=temp;
   }
   //detecting of the cycle
-  void detectcycle(){
+  Node* delete_cycle(){
     Node* slow=head;
     Node* fast=head;
     while(fast!=NULL && fast->next!=NULL){
         slow=slow->next;
         fast=fast->next->next;
         if(slow==fast){
-            cout<<"the ll has cycle in it"<<endl;
-            return ;
+             break; //as we want to preserve the fast ka value
         }
     }
+    //agar cycle nhi mila to
+    if(fast==NULL && fast->next==NULL){
     cout<<"the ll does not has a cycle"<<endl;
+    return NULL;
+    }
+   slow=head;
+    while(slow!=fast){
+      slow=slow->next;
+      fast=fast->next;
+    }
+    cout<<"the cycle is deleted now"<<endl;
   }
 };
 int main()
@@ -72,5 +81,5 @@ int main()
     cout<<"enter the position where you want to create cycle or neter -1 for no cycle:";
     cin>>pos;
     ll.createcycle(pos);
-    ll.detectcycle();
+    ll.delete_cycle();
 }  
