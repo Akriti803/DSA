@@ -1,6 +1,6 @@
 #include<iostream>
-int hashh[10000000];//globally declared the hash just in case we get a large number of queries
-//#include<unordered_map>-we can decalre it like this aswell
+int hashh[10000000];//globally declared the hash just in case we get a large number of queries i.e 10^7
+//#include<unordered_map>-we usually declare it like this only because if the number of queries become greter than 10^7
 using namespace std;
 int main()
 {
