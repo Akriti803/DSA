@@ -1,5 +1,6 @@
 #include<iostream>
-#include<unordered_map>
+int hashh[10000000];//globally declared the hash just in case we get a large number of queries
+//#include<unordered_map>-we can decalre it like this aswell
 using namespace std;
 int main()
 {
@@ -11,9 +12,8 @@ int main()
         cout<<"eter the elements of the array:"<<i+1<<endl;
         cin>>arr[i];
     }
-    unordered_map<int,int>hash;
     for(int i=0;i<n;i++){
-        hash[arr[i]]+=1;
+        hashh[arr[i]]+=1;
     }
     int q;
     cout<<"enter the number of queries:";
@@ -22,6 +22,6 @@ int main()
         int number;
         cout<<"enter the number for which u have query:"<<endl;
         cin>>number;
-        cout<<"the total number of occurence is:"<<hash[number]<<endl;
+        cout<<"the total number of occurence is:"<<hashh[number]<<endl;
     }
 }
