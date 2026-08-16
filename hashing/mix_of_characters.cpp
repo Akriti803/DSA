@@ -8,7 +8,7 @@ int main(){
     cout<<"enter the number of queries:"<<endl;
     cin>>q;
     cin.ignore();
-    int hash[256]={0};
+    int hash[256]={0};//we dont have such complexity related to ki hash ka size agar zaada bad ho gaya to kyunki we know ki at max the total number of characters are 256 only
     for(int i=0;i<s.size();i++){
         hash[s[i]]+=1;//isme the particular charcter apni ascii value pe jala jaayega kyun we have a mx size of 256 jisme we can have uppercase lowercase etc
     }
