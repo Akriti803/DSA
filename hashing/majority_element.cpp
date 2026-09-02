@@ -20,8 +20,5 @@ int main()
         {
             cout << it.first << " ";
         }
-        else{
-            cout<<"there is none";
-        }
     }
 }
