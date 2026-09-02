@@ -2,6 +2,7 @@
 #include<vector>
 using namespace std;
 int binary(vector<int> v,int tar,int st,int end){
+    int end=v.size()-1;
     while(st<=end){
         int mid=st+(end-st)/2;
         if(mid==tar){
