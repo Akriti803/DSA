@@ -5,7 +5,7 @@ bool issorted(vector<int> v, int n){
     if(n==1 || n==0){
         return true;
     }
-    if(v[n-1]<v[n-2]){
+    if(v[n-2]>v[n-1]){
         return false;
     }
     return issorted(v,n-1);
